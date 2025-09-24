@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://ct6ujwv50yakt"]
+
+[ext_resource type="Script" uid="uid://so6u0p80yxdc" path="res://assets/elmo/elmo_run.gd" id="1_be6ce"]
+[ext_resource type="PackedScene" uid="uid://dxswwca70qrg8" path="res://assets/elmo/Run.tscn" id="1_tqpyp"]
+[ext_resource type="PackedScene" uid="uid://cv07hr7xqe2tq" path="res://assets/round_platform.glb" id="3_s3r82"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_be6ce")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.310033, 1.06045, 2.34626)
+
+[node name="Run1" parent="." instance=ExtResource("1_tqpyp")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -1.5057, 0, -0.084847)
+
+[node name="Run2" parent="." instance=ExtResource("1_tqpyp")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.366568, 0, -0.084847)
+
+[node name="Run3" parent="." instance=ExtResource("1_tqpyp")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.513859, -0.0397799, -0.084847)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, -0.496588, 3.53382, 2.31473)
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("3_s3r82")]
+transform = Transform3D(1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0)
